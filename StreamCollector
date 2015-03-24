@@ -11,6 +11,8 @@ access_token_key = TWITTER_ACCESS_TOKEN_KEY
 access_token_secret = TWITTER_ACCESS_TOKEN_SECRET
  
  
-start_time = time.time() #grabs the system time
+start_time = time.time() #the system time
 keyword_list = ['twitter'] #track list
+
+
 
