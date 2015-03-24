@@ -8,7 +8,7 @@ import os
 ckey = TWITTER_API_KEY
 consumer_secret = '**CONSUMER SECRET KEY***'
 access_token_key = '**ACCESS TOKEN**'
-access_token_secret = '**ACCESS TOKEN SECRET**'
+access_token_secret = TWITTER_ACCESS_TOKEN_SECRET
  
  
 start_time = time.time() #grabs the system time
