@@ -4,3 +4,12 @@ from tweepy import Stream
 from tweepy import OAuthHandler
 from tweepy.streaming import StreamListener
 import os
+
+ckey = '**CONSUMER KEY**'
+consumer_secret = '**CONSUMER SECRET KEY***'
+access_token_key = '**ACCESS TOKEN**'
+access_token_secret = '**ACCESS TOKEN SECRET**'
+ 
+ 
+start_time = time.time() #grabs the system time
+keyword_list = ['twitter'] #track list
