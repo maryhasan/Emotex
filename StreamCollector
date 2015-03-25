@@ -14,5 +14,12 @@ access_token_secret = TWITTER_ACCESS_TOKEN_SECRET
 start_time = time.time() #the system time
 keyword_list = ['twitter'] #track list
 
+class listener(StreamListener):
 
+    def on_data(self, data):
+        print data
+        return True
+
+    def on_error(self, status):
+        print status
 
