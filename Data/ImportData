@@ -1,0 +1,3 @@
+with open('happy-active.csv', 'rb') as f:
+    reader = csv.reader(f)
+    happy-active = list(reader)
