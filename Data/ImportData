@@ -10,3 +10,5 @@ with open(name, 'rb') as f:
     reader = csv.reader(f)
     hashtags[name] = list(reader)
 
+if __name__ == "__main__":
+    print hashtags
