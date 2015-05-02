@@ -1,3 +1,15 @@
-with open('happy-active.csv', 'rb') as f:
+import csv
+
+
+hashtags={}
+happy-inactive=[]
+unhappy-active=[]
+unhappy-inactive=[]
+
+file_names = ['happy-activ','happy-inactiv','unhappy-inactiv','unhappy-inactiv']
+
+for name in file_names
+with open(name, 'rb') as f:
     reader = csv.reader(f)
-    happy-active = list(reader)
+    hashtags[name] = list(reader)
+
