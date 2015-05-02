@@ -1,0 +1,29 @@
+import tweepy
+import csv
+
+#import twitter
+#---------------------------------------------
+# Define a Function to Login Twitter API
+consumer_key = '65qLppN0kYahOKonX1Q7uaDiR'
+consumer_secret ='QtpP7zpzTSCNorJHcHUfqTXmspOWh3fSthxvBz0IORoU3XlFYL'
+access_token = '159900123-PfWbqtD456og2si59BeWMv7NyKoCyYqiB5hq1JPY'
+access_token_secret = 'rydeFIETJ2NbLxNBL24ow1kvDcaZzWG8pIhIDv7n3Ke2u'
+
+auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+auth.set_access_token(access_token, access_token_secret)
+api = tweepy.API(auth)
+
+csvFile = open('./Maryland/tweetsUSAApr30Baltimore.csv', 'a')
+csvWriter = csv.writer(csvFile)
+for tweet in tweepy.Cursor(api.search,
+                           since="2015-04-29",
+                           until="2015-05-01",
+                           locations=[25,-125,48,-65],
+                           q=['#Baltimore'],                 
+                           lang="en").items(): 
+    print tweet.created_at, tweet.text
+    csvWriter.writerow([ tweet.text.encode('utf-8').replace('\n', ' ').replace('\r', ' ')])
+    csvWriter.writerow(['utc time: ', tweet.created_at, 'userid:', tweet.user.screen_name])
+    
+    
+csvFile.close()
