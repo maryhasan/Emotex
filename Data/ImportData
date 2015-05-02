@@ -2,11 +2,8 @@ import csv
 
 
 hashtags={}
-happy-inactive=[]
-unhappy-active=[]
-unhappy-inactive=[]
 
-file_names = ['happy-activ','happy-inactiv','unhappy-inactiv','unhappy-inactiv']
+file_names = ['happy-active','happy-inactive','unhappy-inactive','unhappy-inactive']
 
 for name in file_names
 with open(name, 'rb') as f:
